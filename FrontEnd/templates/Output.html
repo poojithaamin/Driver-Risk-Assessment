@@ -1,0 +1,111 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Risk Analysis</title>
+
+
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="/static/src/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/src/css/style.css" rel="stylesheet">
+
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="/static/css/signup.css" rel="stylesheet">
+    <script src="/static/js/jquery-1.11.2.js"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  </head>
+
+
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card-2">
+    <a href="/" class="w3-bar-item w3-button"><b>Insurance</b> Consultant</a>
+
+    <div class="w3-right w3-hide-small">
+      <a href="/#contact" class="w3-bar-item w3-button">Contact</a>
+
+        <a href="/" class="w3-bar-item w3-button">Logout</a>
+    </div>
+  </div>
+</div>
+
+
+    <div class="container">
+      <div class="header">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+          </ul>
+        </nav>
+      </div>
+
+      <div class="jumbotron">
+          <h3>Result for {{ name }}</h3>
+          <h2>Analysis Result:- <br>{{ name }} is {{ text }} as a driver.</h2>
+      </div>
+        <b>Risk analysis reference bar</b>
+        <div class="progress">
+        <div class="progress-bar progress-bar-success" role="progressbar" style="width:33%">
+            Low
+        </div>
+        <div class="progress-bar progress-bar-warning" role="progressbar" style="width:33%">
+            Moderate
+        </div>
+        <div class="progress-bar progress-bar-danger" role="progressbar" style="width:34%">
+            High
+        </div>
+      </div>
+
+        <div class="container">
+          <h2>Risk Analysis Result</h2>
+          <div class="progress">
+              {%  if risk == 30 %}
+            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow={{ risk }} aria-valuemin="0" aria-valuemax="100" style={{ riskp }} >{{ text }}
+              <span class="sr-only"></span>
+            </div>
+              {% endif %}
+            {%  if risk == 60 %}
+            <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow={{ risk }} aria-valuemin="0" aria-valuemax="100" style={{ riskp }} >{{ text }}
+              <span class="sr-only"></span>
+            </div>
+              {% endif %}
+            {%  if risk == 90 %}
+            <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow={{ risk }} aria-valuemin="0" aria-valuemax="100" style={{ riskp }} >{{ text }}
+              <span class="sr-only"></span>
+            </div>
+              {% endif %}
+          </div>
+        </div>
+
+
+
+         <div class="container">
+         <h3>Analysis Parameters</h3>
+             ----------------------------------------
+          <h4>DMV score : {{ dmvScore }}</h4><br>
+          <h4>Credit score : {{ cScore }}</h4><br>
+          <h4>Vehicle score : {{ vScore }}</h4><br>
+          <h4>Mileage : {{ Mileage }}</h4><br>
+          <h4>Experience : {{ Exp }}</h4><br>
+        </div>
+
+      <footer class="footer">
+        <p>&copy; SJSU Insurance Consultancy 2017</p>
+      </footer>
+
+    </div>
+
+</body>
+</html>
+

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Hello, {{name}}</title>
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="/static/src/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/src/css/style.css" rel="stylesheet">
+      <link href="/static/layout/src/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/layout/src/css/style.css" rel="stylesheet">
+
+
+    <link href="/static/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+
+  <!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card-2">
+    <a href="/" class="w3-bar-item w3-button"><b>Insurance</b> Consultant</a>
+
+    <div class="w3-right w3-hide-small">
+      <a href="/#contact" class="w3-bar-item w3-button">Contact</a>
+      <a href="/" class="w3-bar-item w3-button">Logout</a>
+    </div>
+  </div>
+</div>
+
+	<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			 
+			<grammarly>
+				<div class="_e725ae-textarea_btn _e725ae-show _e725ae-field_hovered _e725ae-not_focused">
+					<div class="_e725ae-transform_wrap">
+						<div class="_e725ae-status">
+						</div>
+					</div>
+				</div>
+			</grammarly>
+                <div class="container-fluid">
+	<div class="row">
+        <div class="jumbotron">
+				<h2>
+					Hello, {{name}}!
+				</h2>
+				<p>
+					Here, you can view the score of the driver and can also monitor the driving behavior of the driver.
+                    <br>Click on Driver's Risk Analysis tab for score and on Driver's Behavior Monitor tab to view the behavior.
+                </p>
+				<p>
+					<a class="btn btn-primary btn-large" href="#">Learn more</a>
+				</p>
+			</div>
+		<div class="col-md-6">
+			<div class="panel-group" id="panel-12263">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-12263" href="#panel-element-315032">Driver's Risk Analysis</a>
+					</div>
+					<div id="panel-element-315032" class="panel-collapse collapse">
+						<div class="panel-body">
+
+                            	<div class="panel-group" id="panel-84">
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-84" href="#panel-element-9012">Check Score</a>
+					</div>
+					<div id="panel-element-9012" class="panel-collapse collapse">
+						<div class="panel-body">
+                        <h3 class="text-center">
+				Please enter the below information to check the Risk Score for the Driver.
+			</h3>
+			<div class="row">
+				<div class="col-md-12">
+					<form role="form" action="/validateInput" method="post">
+						<div class="form-group row">
+  							<label for="Name" class="col-2 col-form-label">Name</label>
+ 						<div class="col-10 ">
+                            <input type="text" name="Name" id="Name" class="form-control " placeholder="Name" required autofocus>
+  						</div>
+						</div>
+						<div class="form-group row">
+						  <label for="DOB" class="col-2 col-form-label ">Date Of Birth</label>
+						  <div class="col-10">
+                              <input type="date" name="DOB" id="DOB" class="form-control" placeholder="MM/DD/YYY" required autofocus>
+						  </div>
+						</div>
+						<div class="form-group row">
+						  <label for="PlateNo" class="col-2 col-form-label">Vehicle License Plate No</label>
+						  <div class="col-10">
+                              <input type="text" name="PlateNo" id="PlateNo" class="form-control" placeholder="License Plate No." required autofocus>
+						  </div>
+						</div>
+						<div class="form-group row">
+						  <label for="Zip_Code" class="col-2 col-form-label">Zip Code</label>
+						  <div class="col-10">
+                              <input type="number" name="Zip_Code" id="Zip_Code" class="form-control" placeholder="Zip Code" required autofocus>
+						  </div>
+						</div>
+						<div class="form-group row">
+						  <label for="Experience" class="col-2 col-form-label">Driving Experience(Months)</label>
+						  <div class="col-10">
+                              <input type="number" name="Experience" id="Experience" class="form-control" placeholder="Experience" required autofocus>
+						  </div>
+						</div>
+						<div class="form-group row">
+						  <label for="Mileage" class="col-2 col-form-label">Annual Mileage</label>
+						  <div class="col-10">
+                              <input type="number" name="Mileage" id="Mileage" class="form-control" placeholder="Mileage" required autofocus>
+						  </div>
+						</div>
+						<div class="form-group row">
+						  <label for="Gender" class="col-2 col-form-label">Gender</label>
+						  <div class="col-10">
+                              <input type="radio" name="Gender" value="Male"> Male<br>
+                                <input type="radio" name="Gender" value="Female"> Female<br>
+                                <input type="radio" name="Gender" value="Other"> Other<br>
+						  </div>
+						</div>
+						<div class="form-group row">
+						  <label for="Marital_Status" class="col-2 col-form-label">Marital Status</label>
+						  <div class="col-10">
+                              <input type="radio" name="Marital_Status" value="Single"> Single<br>
+                              <input type="radio" name="Marital_Status" value="Single"> Married<br>
+						  </div>
+						</div>
+
+						<button type="submit" class="btn btn-default btn-primary">
+							Submit
+						</button>
+					</form>
+				</div>
+			</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+                            <div class="panel-group" id="panel-845511">
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-845511" href="#panel-element-90128511">Bulk Upload</a>
+					</div>
+					<div id="panel-element-90128511" class="panel-collapse collapse">
+						<div class="panel-body">
+                        <div class="form-group">
+
+					<label for="exampleInputFile">
+						File input
+					</label>
+					<input type="file" id="exampleInputFile" />
+					<p class="help-block">
+						Example block-level help text here.
+					</p>
+				</div>
+                            <button type="submit" class="btn btn-default btn-primary">
+							Submit
+						</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+		</div>
+		<div class="col-md-6">
+			<div class="panel-group" id="panel-8452">
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-8452" href="#panel-element-901283">Driver's Behavior Monitor</a>
+					</div>
+					<div id="panel-element-901283" class="panel-collapse collapse">
+						<div class="panel-body">
+										<div class="panel-group" id="panel-8457">
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-8457" href="#panel-element-901287">Add a Driver</a>
+					</div>
+					<div id="panel-element-901287" class="panel-collapse collapse">
+						<div class="panel-body">
+											<div class="col-md-12">
+					<form role="form" action="/validateInput" method="post">
+						<div class="form-group row">
+  							<label for="Name" class="col-2 col-form-label">Name</label>
+ 						<div class="col-10 ">
+                            <input type="text" name="Name" id="Name" class="form-control " placeholder="Name" required autofocus>
+  						</div>
+						</div>
+						<div class="form-group row">
+						  <label for="DOB" class="col-2 col-form-label ">Date Of Birth</label>
+						  <div class="col-10">
+                              <input type="date" name="DOB" id="DOB" class="form-control" placeholder="MM/DD/YYY" required autofocus>
+						  </div>
+						</div>
+						<div class="form-group row">
+						  <label for="PlateNo" class="col-2 col-form-label">Device ID</label>
+						  <div class="col-10">
+                              <input type="text" name="PlateNo" id="PlateNo" class="form-control" placeholder="Device ID Number" required autofocus>
+						  </div>
+						</div>
+						<div class="form-group row">
+						  <label for="Zip_Code" class="col-2 col-form-label">Zip Code</label>
+						  <div class="col-10">
+                              <input type="number" name="Zip_Code" id="Zip_Code" class="form-control" placeholder="Zip Code" required autofocus>
+						  </div>
+						</div>
+                        <button type="submit" class="btn btn-default btn-primary">
+							Submit
+						</button>
+                    </form>
+
+						</div>
+					</div>
+				</div>
+			</div>
+                            			<div class="panel-group" id="panel-8455">
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-8455" href="#panel-element-901285">Monitor Driver</a>
+					</div>
+					<div id="panel-element-901285" class="panel-collapse collapse">
+						<div class="panel-body">
+                            <p>
+      <label for="select">Example select</label>
+      <select id="select">
+        <option value="">Choose...</option>
+        <optgroup label="Driver's ID">
+          <option value="">Shivam Kumar Gupta</option>
+          <option value="">Abhijeet Rawat</option>
+          <option value="">Tanay Rashinkar</option>
+        </optgroup>
+      </select>
+    </p>
+
+                            <button type="submit" class="btn btn-default btn-primary">
+							Submit
+						</button>
+						</div>
+					</div>
+				</div>
+			</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+		</div>
+	</div>
+</div>
+    </div>
+
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/scripts.js"></script>
+  </body>
+</html>
